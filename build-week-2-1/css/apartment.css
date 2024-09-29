@@ -1,0 +1,93 @@
+:root {
+  --bordi-img: 1.2rem;
+  --no-margin: 0px;
+  --grassetto: bold;
+}
+
+main {
+  margin: var(--no-margin);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h6,
+.p-piccolo {
+  font-size: small;
+}
+.user-div h6,
+p {
+  font-size: xx-small;
+}
+
+p {
+  margin: var(--no-margin);
+}
+/*HOVER LIKE BUTTON*/
+.heart .heart-fill {
+  fill: #00000000;
+}
+
+.heart .heart-outline {
+  fill: #000000;
+}
+
+.heart .heart-outline,
+.heart .heart-fill {
+  transition-property: fill;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+#heart:hover {
+  cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+}
+
+#heart:hover .heart-fill,
+#heart:hover .heart-outline {
+  fill: #ff0000;
+}
+
+.radius1 {
+  border-top-right-radius: var(--bordi-img);
+}
+
+.radius2 {
+  border-bottom-right-radius: var(--bordi-img);
+}
+
+#date_price {
+  height: 14rem;
+  width: 20rem;
+  border: solid 1px black;
+  -webkit-box-shadow: 9px 7px 18px -1px rgba(0,0,0,0.63); 
+box-shadow: 9px 7px 18px -1px rgba(0,0,0,0.63);
+}
+  
+
+
+@media screen and (max-width: 766px) {
+  #bigImage {
+    border-bottom-right-radius: var(--bordi-img);
+    border-top-right-radius: var(--bordi-img);
+  }
+  .radius3 {
+    border-top-left-radius: var(--bordi-img);
+  }
+  .radius4 {
+    border-bottom-left-radius: var(--bordi-img);
+  }
+}
+
+.bi-list::before,
+.bi-person-circle::before {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AirB&B Clone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md p-0 mx-4">
+      <div class="container-fluid p-0">
+        <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="" width="120"></a>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list text-secondary" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto ms-auto d-flex">
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#">Place to stay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#">Experiences</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" aria-current="page" href="#">Online experiences</a>
+            </li>
+          </ul>
+          <!--PROVA ANIMAZIONE KEYFRAME IN CSS-->
+          <button type="button" class="btn text-light d-none d-md-block">Become a host</button>
+          <button type="button" class="btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-globe2 text-light d-none d-md-block" viewBox="0 0 16 16">
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+            </svg>
+          </button>
+
+          <!--USER-->
+          <div class="dropdown">
+
+            <button class="btn dropdown-toggle bg-light rounded-pill" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" data-bs-display="static">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-list text-secondary" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-person-circle"
+                viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                <path fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-md-end">
+              <li><a class="dropdown-item" href="#">My Profile</a></li>
+              <li><a class="dropdown-item" href="#">Reservations</a></li>
+              <li><a class="dropdown-item" href="#">Favorites</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="jumbotron jumbotron-fluid hero-jumbotron">
+      <div class="row d-flex flex-column">  
+
+        <!--SEARCH-->
+
+        <div class="container bg-light rounded-5 main-bar d-flex" id="search-bar">
+          <div class="row">
+            <select class="form-control w-25 rounded-start-5 border-0 bg-light ps-3">
+              <option value="" disabled selected hidden>Location</option>
+              <option>London</option>
+              <option>Boston</option>
+              <option>Mumbai</option>
+              <option>New York</option>
+              <option>Toronto</option>
+              <option>Paris</option>
+            </select>
+
+            <form action="#" class="col d-flex align-items-center">
+              <div class="form-group">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="check-in"
+                  name="check-in" class="form-control border-0 bg-light" placeholder="Check-in">
+              </div>
+              <div class="form-group px-2">
+                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="check-out"
+                  name="check-out" class="form-control border-0 bg-light" placeholder="Check-out">
+              </div>
+              <div class="form-group px-2">
+                <input type="number" class="form-control border-0 bg-light" id="guests" placeholder="Guests">
+              </div>
+              <button type="submit" class="btn btn-base border-0 bg-danger rounded-circle py-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class=" text-light feather feather-search">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!--HERO-->
+
+        <div class="container-fluid">
+          <div class="row ms-5">
+            <div class="container-fluid py-5 mt-5">
+              <h1 class="text-light">
+                Go <br> Near
+              </h1>
+              <button type="button" class="btn btn-light fw-bold">Explore nearby stays</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!--ROW01-->
+
+    <div class="container">
+      <div class="container-fluid mt-5 mx-auto col-11 col-md-12 col-xl-11">
+        <div class="row justify-content-center d-flex flex-lg-wrap">
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2 ">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/1.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Genova</p>
+                  <p class="m-0">15 minutes drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/2.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Inverness</p>
+                  <p class="m-0">2 hrs flight</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/3.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Edimburgh</p>
+                  <p class="m-0">1,5 hrs flight</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/4.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Rapallo</p>
+                  <p class="m-0">2 hrs drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/5.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Milan</p>
+                  <p class="m-0">1,5 hrs drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/4.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Montecarlo</p>
+                  <p class="m-0">2 hrs drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/1.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Kirkwall</p>
+                  <p class="m-0">1 hrs drive</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 p-2 p-lg-0 py-lg-2">
+            <div class="container-fluid">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-5 col-sm-3 col-md-4 col-lg-5">
+                  <a href="#">
+                    <img src="assets/1.webp" alt="" class="icon img rounded">
+                  </a>
+                </div>
+                <div class="col-5 gx-0 text-nowrap">
+                  <p class="fw-bold m-0">Nordkapp</p>
+                  <p class="m-0">10 hrs flight</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container-fluid">
+      <footer class="d-flex flex-wrap align-items-center py-3 my-4 border-top">
+        <p class="mb-0 text-body-secondary">© 2024 Airbnb, Inc.</p>
+
+        <ul class="nav">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Termini</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Mappa del sito</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Dettagli dell'azienda</a></li>
+        </ul>
+      </footer>
+    </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

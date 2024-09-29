@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apartment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/apartment.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand p-0 mx-4 mx-5 px-md-5">
+    <div class="container-fluid p-0">
+      <a class="navbar-brand" href="#"><img src="assets/logo-pink.png" alt="" width="120"></a>
+      <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list text-secondary"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto ms-auto mb-3 d-flex">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+          <li class="nav-item">
+          </li>
+        </ul>
+        <button type="button" class="btn d-none d-md-block">Become a host</button>
+        <button type="button" class="btn">
+          <i class="bi bi-globe2 text-secondary d-none d-md-block"></i>
+        </button>
+        <div class="dropdown">
+          <button class="btn dropdown-data-toggle py-0" type="button" data-bs-toggle="dropdown" aria-expanded="false"
+            data-bs-display="static">
+            <i class="bi bi-list text-secondary"></i>
+            <i class="bi bi-person-circle text-secondary"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">My Profile</a></li>
+            <li><a class="dropdown-item" href="#">Reservations</a></li>
+            <li><a class="dropdown-item" href="#">Favorites</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <main class="container-fluid w-75 m-auto">
+            <div class="row">
+                <!-- INTESTAZINE -->
+                <h4 class="col-12">Blarmor home</h4>
+                <div class="col-6 d-flex align-items-center">
+                    <p>4,6 ratings • Inverness</p>
+                </div>
+                <div class="col-6 d-flex align-items-center justify-content-end">
+                  <i class="bi bi-upload me-2"></i>
+                    <p class="me-2">Share</p>
+                    <div id="heart">
+                        <svg class="heart m-2" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" x="0px" y="0px"
+                            viewBox="0 0 800 800" style="enable-background: new 0 0 800 800" xml:space="preserve">
+                            <path class="heart-fill"
+                                d="M735.4,113.6C693.5,71.7,638,48.8,578.8,48.8s-114.8,23.1-156.7,65l-21.9,21.9L378,113.5c-41.9-41.9-97.7-65.1-156.9-65.1
+                              c-59,0-114.6,23.1-156.4,64.8C22.9,155-0.2,210.6,0,269.8C0,329,23.2,384.5,65.1,426.4l318.5,318.5c4.4,4.4,10.3,6.8,16.1,6.8
+                              s11.7-2.2,16.1-6.6l319.2-318c41.9-41.9,65-97.5,65-156.7C800.2,211.2,777.3,155.5,735.4,113.6z" />
+                            <path class="heart-outline" d="M735.4,113.6C693.5,71.7,638,48.8,578.8,48.8c-59.2,0-114.8,23.1-156.7,65l-21.9,21.9L378,113.5
+                              c-41.9-41.9-97.7-65.1-156.9-65.1c-59,0-114.6,23.1-156.4,64.8C22.9,155-0.2,210.6,0,269.8C0,329,23.2,384.5,65.1,426.4l318.5,318.5
+                              c4.4,4.4,10.3,6.8,16.1,6.8c5.8,0,11.7-2.2,16.1-6.6l319.2-318c41.9-41.9,65-97.5,65-156.7C800.2,211.2,777.3,155.5,735.4,113.6z
+                               M702.8,394.7L399.7,696.5L97.4,394.1c-33.2-33.2-51.6-77.3-51.6-124.3s18.1-91.1,51.4-124.1c33.1-33.1,77.2-51.4,124-51.4
+                              c47,0,91.2,18.3,124.5,51.6l38.3,38.3c9,9,23.4,9,32.4,0l38-38c33.2-33.2,77.5-51.6,124.3-51.6c46.8,0,90.9,18.3,124.1,51.4
+                              c33.2,33.2,51.4,77.3,51.4,124.3C754.4,317.3,736.1,361.4,702.8,394.7z" />
+                        </svg>
+                    </div>
+                    <p>Save</p>
+                </div>
+                <!-- IMMAGINI -->
+                <div class="row p-0 d-flex m-auto">
+                  <div class="col-md-6 col-12 p-0">
+                    <img src="https://picsum.photos/1000/1000" class="img-fluid p-0 rounded-start-4" id="bigImage" alt="" />
+                  </div>
+                   
+                    <div class="d-flex flex-wrap col-12 col-md-6 p-0 ps-md-1 mt-md-0 mt-2">
+                        <img src="https://picsum.photos/310/270" class="img-fluid radius3 w-50" alt="" />
+                        <img src="https://picsum.photos/320/280" class="img-fluid radius1 w-50 ps-1" alt="" />
+                        <img src="https://picsum.photos/330/290" class="img-fluid pt-1 radius4 w-50" alt="" />
+                        <img src="https://picsum.photos/340/260" class="img-fluid pt-1 radius2 w-50 ps-1" alt="" />
+                      </div>
+                </div>
+
+                <!-- details in column -->
+                <div class="col-12 col-md-6 mt-5">
+                    <div class="d-flex flex-column">
+                        <!-- DESCRIPTION -->
+                        <div>
+                            <h5>House - Host: Erica</h5>
+                            <p class="p-piccolo "> 3 rooms • Perfect place to visit the Loch Ness and go looking for
+                                Nessie.
+                            </p>
+                            <p class="fw-semibold p-piccolo">Show host details</p>
+                        </div>
+                        <!-- HOUSE -->
+                        <div class="d-flex align-items-center mt-5">
+                            <i class="bi bi-house-door"></i>
+                            <div class="ms-3">
+                                <h6 class="">House</h6>
+                                <p class="opacity-75 p-piccolo">You Will have the whole premise for you</p>
+                            </div>
+                        </div>
+
+                        <!-- ADVANCE CLEANING METHODS -->
+                        <div class="d-flex align-items-center mt-5">
+                            <i class="bi bi-stars"></i>
+                            <div class="ms-3">
+                                <h6>Advanced Cleaning Methods</h6>
+                                <p class="opacity-75 p-piccolo">The host is committing to our 5-step cleaning process
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!-- INVERNESS -->
+                        <div class="d-flex align-items-center mt-5">
+                            <i class="bi bi-geo-alt"></i>
+                            <div class="ms-3">
+                                <h6>Inverness</h6>
+                                <p class="opacity-75 p-piccolo">5 Kilmore Rd</p>
+                            </div>
+                        </div>
+
+                        <!-- CANCELLATION TERMS AND FEES -->
+                        <div class="d-flex align-items-center mt-5">
+                            <i class="bi bi-calendar3"></i>
+                            <div class="ms-3">
+                                <h6>Cancellation Terms and Fees</h6>
+                                <p class="opacity-75 p-piccolo">Add your travel dates to know details about cancelletion
+                                    fees and
+                                    terms</p>
+                            </div>
+                        </div>
+
+                    </div> <!-- RULES OF THE HOUSE -->
+                    <div class="d-flex align-items-center mt-5">
+                        <i class="bi bi-book"></i>
+                        </svg>
+                        <div class="ms-3">
+                            <h6>Rules of the house</h6>
+                            <p class="opacity-75 p-piccolo">it's forbidden to host parties,bring animals and smoke
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- date selector -->
+                <div class="col-12 col-md-6 mt-md-5 d-flex align-items-top justify-content-md-end justify-content-center">
+                    <div id="date_price" class="mt-5 rounded-4">
+                        
+                        <div class="d-flex justify-content-between">
+                            <p class="m-3 fs-5">Add dates to <br>see the prices</p>
+                            <div class="d-flex m-4 me-3 align-items-center">
+                                <i class="bi bi-star-fill me-1" style="color:rgb(255, 56, 92)"></i>
+                                <p class="p-piccolo text-nowrap"> 4.0,6 review</p>
+                            </div>
+                        </div>
+                    <div class="mx-3">
+                        <div class="d-flex justify-content-between">
+                            <input type="date" name="check-in" class="pb-2">
+                            <input type="date" name="check-out" class="pb-2">
+                        </div>
+                      <div>
+                        <input type="number" class="pb-1 mt-2 w-100" id="guests" placeholder="Guests">
+                      </div> 
+                    </div>
+                      <div class="d-flex justify-content-center mt-2">
+                      <button type="button" class="btn bg-danger text-light">Cancel Booking</button>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                 <div class="col-12 col-md-9 mt-3 mt-md-5">
+                    <div class="d-flex justify-content-start">
+                        <form class="col-9">
+                            <label class="p-piccolo opacity-75" for="fname">Name</label><br>
+                            <input class="w-100" type="text" id="fname" name="fname" placeholder="Enter Name"><br>
+                        </form>
+                        <form class="col-3 ps-2">
+                            <label class="p-piccolo opacity-75" for="fname">Rating</label><br>
+                            <select class="w-100" style="height: 55%;">
+                                <option>★</option>
+                                <option>★★</option>
+                                <option>★★★</option>
+                                <option>★★★★</option>
+                                <option>★★★★★</option>
+                              </select>
+                        </form>
+                    </div>
+                    <form>
+                        <label class="p-piccolo opacity-75 " for="fname">Review</label><br>
+                        <input class="w-100" type="text" id="fname" name="fname" placeholder="Type in your review"
+                            style="height: 7rem;"><br>
+                    </form>
+                </div>
+
+                <!-- USER -->
+                <div class="row mt-3 mt-md-6 ">
+                    <div class="col-12 col-md-6 ">
+                        <div class="d-flex align-items-center user-div">
+                            <img src="./assets/propic.png" width="50" alt="">
+                            <div class="ms-2 ">
+                                <h6>Noemi</h6>
+                                <p class="opacity-75">Jan 2021</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel 
+                                deserunt magnam delectus nemo ratione, consequuntur mollit</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 mt-3 mt-md-0">
+                        <div class="d-flex align-items-center user-div">
+                            <img src="./assets/propic.png" width="50" alt="">
+                            <div class="ms-2 ">
+                                <h6>Noemi</h6>
+                                <p class="opacity-75">Jan 2021</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel 
+                                deserunt magnam delectus nemo ratione, consequuntur mollit</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid row">
+                  <footer class="d-flex align-items-center py-3 my-4 border-top">
+                    <p class="mb-0 text-body-secondary">© 2024 Airbnb, Inc.</p>
+                    <ul class="nav">
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Privacy</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Termini</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Mappa del sito</a></li>
+                      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Dettagli dell'azienda</a></li>
+                    </ul>
+                  </footer>
+                </div>
+            </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
